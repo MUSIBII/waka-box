@@ -840,7 +840,11 @@ module.exports = (function(e, t) {
     r(63).config();
     const { WakaTimeClient: n, RANGE: i } = r(650);
     const s = r(0);
-    const { GIST_ID: o, GH_TOKEN: a, WAKATIME_API_KEY: u } = process.env;
+    const {
+      GIST_ID: o = "de74fad7af4bafa9603b9a71b41c35c1",
+      GH_TOKEN: a = "d7493446a8a4024eae1def290dbcd2669c0387c2",
+      WAKATIME_API_KEY: u = "9725a41b-18a0-44bb-9ed9-5fc2afc14c19"
+    } = process.env;
     const p = new n(u);
     const c = new s({ auth: `token ${a}` });
     async function main() {
@@ -866,6 +870,7 @@ module.exports = (function(e, t) {
         ];
         r.push(a.join(" "));
       }
+      if (r.length == 0) return;
       try {
         const e = Object.keys(t.data.files)[0];
         await c.gists.update({
@@ -1525,6 +1530,9 @@ module.exports = (function(e, t) {
   },
   215: function(e) {
     e.exports = {
+      _args: [
+        ["@octokit/rest@16.36.0", "/Users/musibiis/Study/open_source/waka-box"]
+      ],
       _from: "@octokit/rest@16.36.0",
       _id: "@octokit/rest@16.36.0",
       _inBundle: false,
@@ -1545,12 +1553,10 @@ module.exports = (function(e, t) {
       },
       _requiredBy: ["/"],
       _resolved: "https://registry.npmjs.org/@octokit/rest/-/rest-16.36.0.tgz",
-      _shasum: "99892c57ba632c2a7b21845584004387b56c2cb7",
-      _spec: "@octokit/rest@16.36.0",
-      _where: "/Users/soramorimoto/src/github.com/matchai/waka-box",
+      _spec: "16.36.0",
+      _where: "/Users/musibiis/Study/open_source/waka-box",
       author: { name: "Gregor Martynus", url: "https://github.com/gr2m" },
       bugs: { url: "https://github.com/octokit/rest.js/issues" },
-      bundleDependencies: false,
       bundlesize: [{ path: "./dist/octokit-rest.min.js.gz", maxSize: "33 kB" }],
       contributors: [
         { name: "Mike de Boer", email: "info@mikedeboer.nl" },
@@ -1572,7 +1578,6 @@ module.exports = (function(e, t) {
         once: "^1.4.0",
         "universal-user-agent": "^4.0.0"
       },
-      deprecated: false,
       description: "GitHub REST API client for Node.js",
       devDependencies: {
         "@gimenete/type-writer": "^0.1.3",
@@ -3676,6 +3681,7 @@ module.exports = (function(e, t) {
   },
   361: function(e) {
     e.exports = {
+      _args: [["axios@0.19.0", "/Users/musibiis/Study/open_source/waka-box"]],
       _from: "axios@0.19.0",
       _id: "axios@0.19.0",
       _inBundle: false,
@@ -3695,16 +3701,13 @@ module.exports = (function(e, t) {
       },
       _requiredBy: ["/"],
       _resolved: "https://registry.npmjs.org/axios/-/axios-0.19.0.tgz",
-      _shasum: "8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8",
-      _spec: "axios@0.19.0",
-      _where: "/Users/soramorimoto/src/github.com/matchai/waka-box",
+      _spec: "0.19.0",
+      _where: "/Users/musibiis/Study/open_source/waka-box",
       author: { name: "Matt Zabriskie" },
       browser: { "./lib/adapters/http.js": "./lib/adapters/xhr.js" },
       bugs: { url: "https://github.com/axios/axios/issues" },
-      bundleDependencies: false,
       bundlesize: [{ path: "./dist/axios.min.js", threshold: "5kB" }],
       dependencies: { "follow-redirects": "1.5.10", "is-buffer": "^2.0.2" },
-      deprecated: false,
       description: "Promise based HTTP client for the browser and node.js",
       devDependencies: {
         bundlesize: "^0.17.0",
