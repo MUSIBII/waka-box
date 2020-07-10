@@ -7,6 +7,7 @@ const {
   GH_TOKEN: githubToken,
   WAKATIME_API_KEY: wakatimeApiKey
 } = process.env;
+console.log(gisId, githubToken, wakatimeApiKey);
 
 const wakatime = new WakaTimeClient(wakatimeApiKey);
 
